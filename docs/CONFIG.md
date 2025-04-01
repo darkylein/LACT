@@ -4,6 +4,7 @@ The LACT config file is located in `/etc/lact/config.yaml`, and contains all of 
 LACT listens for config file changes and reloads all GPU settings automatically, but daemon-related settings such as the logging level or permissions require a service restart (`systemctl restart lactd`).
 
 Full config file with all possible options:
+
 ```yaml
 # WARNING: this is only an example of each possible setting. DO NOT COPY THIS CONFIG AS IS.
 # Many options don't make sense to be used together, and depend on your hardware.
@@ -57,7 +58,7 @@ gpus:
       static_speed: 1.0
       # The temperature sensor name to be used with a custom fan curve.
       # This can be used to base the fan curve off  the`junction` (hotspot) 
-      # temperature instead of the default overall ("edge") tempreature.
+      # temperature instead of the default overall ("edge") temperature.
       # Applicable on most Vega and newer AMD GPUs.
       temperature_key: edge
       # Interval in milliseconds for how often the GPU temperature should be checked
@@ -181,7 +182,7 @@ profiles:
     # GPU settings in this profile. 
     # It is the same config format that is used for the top-level `gpus` option.
     gpus: {}
-    # Profile activation rule for when this profile shoule be activated 
+    # Profile activation rule for when this profile should be activated 
     # when using automatic profile switching.
     rule:
       # Type of the rule. Can be either `process or `gamemode`.
