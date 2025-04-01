@@ -850,14 +850,14 @@ impl GpuController for AmdGpuController {
                     ));
                 }
 
-                if config.custom_power_profile_mode_hueristics.is_empty() {
+                if config.custom_power_profile_mode_heuristics.is_empty() {
                     self.handle
                         .set_active_power_profile_mode(mode_index)
                         .context("Failed to set active power profile mode")?;
                 } else {
                     self.handle
                         .set_custom_power_profile_mode_heuristics(
-                            &config.custom_power_profile_mode_hueristics,
+                            &config.custom_power_profile_mode_heuristics,
                         )
                         .context("Failed to set custom power profile mode heuristics")?;
                 }

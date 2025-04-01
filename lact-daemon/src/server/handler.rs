@@ -605,7 +605,7 @@ impl<'a> Handler {
     ) -> anyhow::Result<u64> {
         self.edit_gpu_config(id.to_owned(), |gpu_config| {
             gpu_config.power_profile_mode_index = index;
-            gpu_config.custom_power_profile_mode_hueristics = custom_heuristics;
+            gpu_config.custom_power_profile_mode_heuristics = custom_heuristics;
         })
         .await
         .context("Failed to edit GPU config and set power profile mode")

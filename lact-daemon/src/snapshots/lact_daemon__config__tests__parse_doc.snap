@@ -47,7 +47,7 @@ gpus:
       0: 200
     voltage_offset: 0
     power_profile_mode_index: 0
-    custom_power_profile_mode_hueristics:
+    custom_power_profile_mode_heuristics:
       - - 0
         - 5
         - 1

@@ -111,7 +111,7 @@ pub struct Gpu {
     pub power_profile_mode_index: Option<u16>,
     /// Outer vector is for power profile components, inner vector is for the heuristics within a component
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
-    pub custom_power_profile_mode_hueristics: Vec<Vec<Option<i32>>>,
+    pub custom_power_profile_mode_heuristics: Vec<Vec<Option<i32>>>,
     #[serde(default, skip_serializing_if = "IndexMap::is_empty")]
     pub power_states: IndexMap<PowerLevelKind, Vec<u8>>,
 }
@@ -558,7 +558,7 @@ mod tests {
             performance_level: None,
             clocks_configuration: ClocksConfiguration::default(),
             power_profile_mode_index: None,
-            custom_power_profile_mode_hueristics: vec![],
+            custom_power_profile_mode_heuristics: vec![],
             power_states: IndexMap::new(),
         };
 
