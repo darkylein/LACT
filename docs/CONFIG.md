@@ -66,7 +66,7 @@ gpus:
       interval_ms: 500
       # Custom fan curve used with `mode` set to `curve`.
       # The format of the map is temperature to fan speed from 0 to 1.
-      # Note: on RDNA3+ AMD GPUs this must have 5 entries.
+      # Note: on RDNA3+ AMD GPUs this must have at least 5 entries.
       curve:
         40: 0.2
         50: 0.35
